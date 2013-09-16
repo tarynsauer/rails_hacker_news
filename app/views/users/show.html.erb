@@ -1,5 +1,5 @@
 <h1>User stats</h1>
 <p>User: <%= @user.name %></p>
 <p>Created: <%= ((Time.now - @user.created_at) / 86400).floor %> days ago</p>
-<p><a href="/user/posts">All user posts</a></p>
-<p><a href="/user/comments">All user comments</a></p>
+<p><%= link_to 'All user posts', user_posts_path %></p>
+<p><%= link_to 'All user comments', user_comments_path %></p>
