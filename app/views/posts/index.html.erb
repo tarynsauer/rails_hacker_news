@@ -1,0 +1,8 @@
+<TABLE>
+  <tbody class = "posts">
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= link_to post.title, post_path(post) %></a> by: <%= post.user.name %> </tr>
+    <% end %>
+  </tbody>
+</TABLE>

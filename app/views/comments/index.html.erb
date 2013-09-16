@@ -1,0 +1,12 @@
+<h1>All comments</h1>
+<TABLE>
+  <tbody class = "comment">
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user.name %> on: <a href="<%= comment.post.url %>"><%= comment.post.title %></a>
+
+          <br><%= comment.body %>
+      </tr>
+    <% end %>
+  </tbody>
+</TABLE>

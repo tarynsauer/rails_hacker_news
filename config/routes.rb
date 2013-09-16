@@ -1,4 +1,22 @@
 HackerNews::Application.routes.draw do
+  get '/' => 'pages#index'
+
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+  resources :posts do
+    resources :comments
+  end
+
+  resources :comments
+
+  get '/signup',  to: 'users#new'
+  get '/login',  to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
+  get '/user/comments',  to: 'users#comments'
+  get '/user/posts',  to: 'users#posts'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

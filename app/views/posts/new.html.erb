@@ -1,0 +1,38 @@
+<h1>Submit a new post</h1>
+
+<%= form_for :post, url: posts_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :url %><br>
+    <%= f.url_field :url %>
+  </p>
+
+  <p>
+    <%= f.submit "Create Post" %>
+  </p>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<form action='/post/create' method ="POST">
+  <label>Title: <input type="text" name="post[title]" placeholder="title"></label><br>
+  <label>URL: <input type="url" name="post[url]" placeholder="url"></label><br>
+  <input type="submit" value="Submit Post">
+</form>
+ -->

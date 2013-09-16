@@ -1,0 +1,29 @@
+<a href="<%= @post.url%>"><%= @post.title%></a><span class="url">(<%= @post.url %>)</span><br>
+        added by:<%= User.find(@post.user_id).name %>
+<hr>
+<TABLE>
+  <tbody class = "comment">
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= User.find(comment.user_id).name %>
+          <br><%= comment.body %>
+      </tr>
+    <% end %>
+  </tbody>
+</TABLE>
+
+
+<%= form_for :comment, url: comments_path do |f| %>
+
+  <p>
+    <%= f.label :Comment %><br>
+    <%= f.text_area :body %>
+  </p>
+    <%= hidden_field_tag(:post_id, @post.id) %>
+  <p>
+    <%= f.submit "Leave Comment" %>
+  </p>
+<% end %>
+
+
+

@@ -1,0 +1,40 @@
+header {
+  margin-bottom: 60px;
+}
+
+.navbar {
+  background-color: #FF6600;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0 15px 10px;
+  margin:0;
+
+}
+
+.navbar li {
+  display: inline;
+  padding-right: 10%;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color:white;
+}
+
+.navbar li a:hover{
+  text-decoration: none;
+  color:#484848 ;
+}
+
+.navbar li:first-child{
+  font-size: 150%;
+  text-decoration: none;
+  color:white;
+}
+
+body {
+  font-family:Tahoma, Geneva, sans-serif;
+  background-color:#D8D8D8;
+}

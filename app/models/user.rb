@@ -2,7 +2,7 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
 
-  attr_accessible :title, :body
+  attr_accessible :name, :password
   include BCrypt
 
   validates :name, presence: true, uniqueness: true
