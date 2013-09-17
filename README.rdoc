@@ -1,3 +1,5 @@
 == Hacker news clone
 
-https://secret-ridge-1665.herokuapp.com/
+Taryn: https://secret-ridge-1665.herokuapp.com/
+
+Eugene: https://secure-chamber-3188.herokuapp.com/
